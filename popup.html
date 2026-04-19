@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Toolbox</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <h1>Browser Toolbox</h1>
+        <p class="popup__subtitle">Per-tab audio controls</p>
+      </header>
+
+      <section class="card" aria-live="polite">
+        <p class="label">Current tab</p>
+        <h2 id="tab-title" class="tab-title">Loading...</h2>
+
+        <p id="status-text" class="status">Ready to control this tab</p>
+
+        <div class="control-group">
+          <div class="control-header">
+            <label for="volume-slider">Volume</label>
+            <span id="volume-value">100%</span>
+          </div>
+          <input
+            id="volume-slider"
+            class="slider"
+            type="range"
+            min="0"
+            max="200"
+            step="1"
+            value="100"
+          />
+        </div>
+
+        <div class="button-row">
+          <button id="mute-button" class="button" type="button">Mute</button>
+          <button id="reset-button" class="button button--secondary" type="button">Reset</button>
+        </div>
+
+        <p id="error-text" class="error" hidden></p>
+
+        <p class="hint">
+          The first volume or mute interaction starts secure tab capture for this tab so
+          Browser Toolbox can route audio through its gain control.
+        </p>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

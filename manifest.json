@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Toolbox",
+  "description": "A Chrome extension with image conversion tools and basic per-tab audio controls.",
+  "version": "1.0.0",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "downloads",
+    "offscreen",
+    "tabCapture",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Browser Toolbox",
+    "default_popup": "popup.html"
+  }
+}

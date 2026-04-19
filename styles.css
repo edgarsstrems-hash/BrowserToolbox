@@ -1,0 +1,155 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --text: #172033;
+  --muted: #5f6f8f;
+  --border: #d7dfec;
+  --accent: #2463eb;
+  --accent-strong: #194fbe;
+  --danger: #bb2d3b;
+  --success-bg: #eaf7ef;
+  --success-text: #1a6f3a;
+  --error-bg: #fff1f2;
+  --error-text: #b42318;
+  --shadow: 0 10px 28px rgba(23, 32, 51, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 340px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.popup {
+  padding: 16px;
+}
+
+.popup__header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.popup__subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.card {
+  margin-top: 14px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.label {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tab-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.status {
+  margin: 0 0 18px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--success-bg);
+  color: var(--success-text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.control-group {
+  margin-bottom: 16px;
+}
+
+.control-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.button:hover {
+  background: var(--accent-strong);
+}
+
+.button--muted {
+  background: var(--danger);
+}
+
+.button--muted:hover {
+  background: #98232f;
+}
+
+.button--secondary {
+  background: #dfe7f7;
+  color: var(--text);
+}
+
+.button--secondary:hover {
+  background: #ccd8f0;
+}
+
+.button:disabled,
+.slider:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.error {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--error-bg);
+  color: var(--error-text);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.hint {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
