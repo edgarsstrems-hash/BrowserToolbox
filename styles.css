@@ -31,15 +31,29 @@ body {
   padding: 16px;
 }
 
+.popup__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
 .popup__header h1 {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 .popup__subtitle {
-  margin: 4px 0 0;
+  margin: 2px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .card {
